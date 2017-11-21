@@ -1,0 +1,86 @@
+// These comments will not be output to the compiled CSS file
+/* This comment will */
+
+// Imports styles found in 'buttons.scss'
+// when the compiler processes application.scss
+
+// @import "buttons";
+
+// Will import _buttons.sass, buttons.sass, _buttons.scss, or buttons.scss
+@import "buttons";
+
+$main: #444;
+
+.btn {
+  color: $main;
+  display: block; 
+}
+
+.btn-a {
+  color: lighte($main, 30%);
+  &:hover {
+    color: lighten($main, 40%);
+  }
+}
+
+
+.content {
+  border: 1px bold #ccc;
+  padding: 20px;
+  background: #ccc;
+  h2 {
+    font-size: 3em;
+    margin: 20px 0;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
+  .callout {
+    border-color: red;
+  }
+  &.callout {
+    border-color: green;
+  }
+  .cell {
+    h2 {
+      a {
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  text: {
+    decoration: underline;
+    transform: lowercase;
+  }
+}
+
+a {
+  color: #999;
+  &:hover {
+    color: #777;
+  }
+  &:active {
+    color: #888;
+  }
+}
+
+.sidebar {
+  float: right;
+  width: 300px;
+  .users & {
+    width: 400px;
+  }
+  h2 {
+    color: #444;
+    .users & {
+      color: #444;
+    }
+  }
+}
+
