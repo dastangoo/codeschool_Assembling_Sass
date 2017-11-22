@@ -1,11 +1,41 @@
-.sidebar {
-  border: 1px solid #777777;
+/*.btn-a {
+  border: 1px solid #ccc;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: #777;
 }
 
-.sidebar p {
-  color: #777777;
+.btn-b {
+  border: 1px solid #ccc;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: #ff0;
+}*/
+
+.btn-a, .btn-b {
+  background: #777;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease-in, background 0.5s ease-out;
+  -moz-transition: color 0.3s ease-in, background 0.5s ease-out;
+  transition: color 0.3s ease-in, background 0.5s ease-out;
 }
 
-h2:before {
-  content: 'My Blog';
+.btn-b {
+  background: #ff0;
+}
+
+.content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.callout {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }

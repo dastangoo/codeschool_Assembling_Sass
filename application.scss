@@ -1,41 +1,33 @@
-$base: #777777;
-$border: rgba(0, 255, 0, 0.5);
-$shadow: #333;
-
-$header: 'Helvetica Neue';
-$callout: Arial;
-$message: "Loading...";
-
-$authors: nick, dan, aimee, drew;
-$margin: 4px 0 20px 100px;
-
-$shadow: null;
-$title: 'My Blog';
-// $title: 'About Me';
-$title: 'About Me' !default;
-
-$rounded: 5px;
-
-/* Types */
-// $rounded: false;
-// $shadow: true;
-
-// $rounded: 4px;
-// $line-height: 1.5;
-// $font-size: 3rem;
-
-
-
-
 @import "buttons";
-
-.sidebar {
-  border: 1px solid $base;
-  p {
-    color: $base;
-  }
+@mixin button {
+  border: 1px solid #ccc;
+  font-size: 1em;
+  text-transform: uppercase;
 }
 
-h2:before {
-  content: $title;
+@mixin box-sizing($x: border-box) {
+  -webkit-box-sizing: $x;
+  -moz-box-sizing: $x;
+  box-sizing: $x;
+}
+
+.btn-a {
+  background: #777;
+  @include button;
+}
+
+.btn-b {
+  background: #ff0;
+  @include button;
+}
+
+
+.content {
+  @include box-sizing;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.callout {
+  @include box-sizing(content-box);
 }

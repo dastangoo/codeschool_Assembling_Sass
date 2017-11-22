@@ -1,15 +1,46 @@
+@mixin button($radius, $color: #000) {
+  border-radius: $radius;
+  color: $color;
+}
+
+@mixin transition($val...) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  transition: $val;
+}
+
+@mixin highlight($color, $side) {
+  border-#{$side}-color: $color;
+}
+// @mixin highlight-t($color) {
+//   border-top-color: $color;
+// }
+// @mixin highlight-r($color) {
+//   border-right-color: $color;
+// }
+// @mixin highlight-b($color) {
+//   border-bottom-color: $color;
+// }
+// @mixin highlight-l($color) {
+//   border-left-color: $color;
+// }
+
 $rounded: 3px !default;
 
 $color-base: #777777;
 
 $side: top;
 
+$properties: 4px, #000;
+
 
 .btn-a {
-  border-radius: $rounded;
-  color: #777;
+  @include button($properties...);
+  @include transition(color 0.3s ease-in, background 0.5s ease-out);
+  // @include highlight-r(#f00);
+  @include height(#f00, right);
 }
-
+1
 .btn-b {
   border-radius: $rounded;
   color: #222;
