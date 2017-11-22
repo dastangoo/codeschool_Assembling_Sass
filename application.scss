@@ -1,49 +1,74 @@
-@function fluidize($target, $context) {
-  @return ($target / $context) * 100%;
+$color-base: #333333;
+$color: #87bf64;
+
+h2 {
+  font-size: 10px + 4pt;
+  
+  // This doesn't work correctly
+  // font-size: 10px + 4em;
+  line-height: ceil(1.2);
 }
 
 .sidebar {
-  width: fluidize(350px, 1000px);
+  width: percentage(350px/1000px); 
 }
 
-$theme: pink;
-
-header {
-  @if $theme == dark {
-    background: #000;
-  } @else if $theme == pink{
-    background: pink;
-  } @else {
-    background: #fff;
-  }
+.addition {
+  background: $color-base + #112233;
 }
 
-$authors: nick aimee dan drew;
-@each $author in $authors {
-  .author-#{$author} {
-    background: url(author-#{$author}.jpg);
-  }
+.subtraction {
+  background: $color-base - #112233;
 }
 
-.item {
-  position: absolute;
-  right: 0;
-  @for $i from 1 through 3 {
-    &.item-#{$i} {
-      top: $i * 30px;
-    }
-  }
+.muliplication {
+  background: $color-base * 2;
 }
 
-$i: 2;
+.division {
+  background: $color-base / 2;
+}
 
-.item {
-  position: absolute;
-  right: 0;
-  @while $i <= 6 {
-    &.item-#{$i} {
-      top: $i * 30px;
-    }
-    $i: $i + 2;
-  }
+.alpha {
+  background: rgba($color, 0.8);
+}
+
+.beta {
+  background: rgba(#000, 0.8);
+}
+
+.lighten {
+  background: lighten($color, 20%);
+}
+
+.darken {
+  background: darken($color, 20%);
+}
+
+.saturate {
+  background: saturate($color, 20%);
+}
+
+.desaturate {
+  background: desaturate($color, 20%);
+}
+
+.mix-a {
+  color: mix(#ffff00, #107fc9);
+}
+
+.mix-b {
+  color: mix(#ffff00, #107cf9, 30%);
+}
+
+.grayscale {
+  color: grayscale($color);
+}
+
+.invert {
+  color: invert($color);
+}
+
+.complement {
+  color: complement($color);
 }

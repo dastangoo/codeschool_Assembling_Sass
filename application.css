@@ -1,39 +1,53 @@
+h2 {
+  font-size: 15.3333333333px;
+  line-height: 2; }
+
 .sidebar {
   width: 35%; }
 
-header {
-  background: pink; }
+.addition {
+  background: #445566; }
 
-.author-nick {
-  background: url(author-nick.jpg); }
+.subtraction {
+  background: #221100; }
 
-.author-aimee {
-  background: url(author-aimee.jpg); }
+.muliplication {
+  background: #666666; }
 
-.author-dan {
-  background: url(author-dan.jpg); }
+.division {
+  background: #1a1a1a; }
 
-.author-drew {
-  background: url(author-drew.jpg); }
+.alpha {
+  background: rgba(135, 191, 100, 0.8); }
 
-.item {
-  position: absolute;
-  right: 0; }
-  .item.item-1 {
-    top: 30px; }
-  .item.item-2 {
-    top: 60px; }
-  .item.item-3 {
-    top: 90px; }
+.beta {
+  background: rgba(0, 0, 0, 0.8); }
 
-.item {
-  position: absolute;
-  right: 0; }
-  .item.item-2 {
-    top: 60px; }
-  .item.item-4 {
-    top: 120px; }
-  .item.item-6 {
-    top: 180px; }
+.lighten {
+  background: #bfddac; }
+
+.darken {
+  background: #558637; }
+
+.saturate {
+  background: #82d54e; }
+
+.desaturate {
+  background: #8ca97a; }
+
+.mix-a {
+  color: #88bf65; }
+
+.mix-b {
+  color: #58a3ae; }
+
+.grayscale {
+  color: #929292; }
+
+.invert {
+  color: #78409b; }
+
+.complement {
+  color: #9c64bf; }
 
 /*# sourceMappingURL=application.css.map */
