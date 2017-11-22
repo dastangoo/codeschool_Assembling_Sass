@@ -1,0 +1,40 @@
+$rounded: 3px !default;
+
+$color-base: #777777;
+
+$side: top;
+
+
+.btn-a {
+  border-radius: $rounded;
+  color: #777;
+}
+
+.btn-b {
+  border-radius: $rounded;
+  color: #222;
+}
+p {
+  $border: #ccc;
+  border-top: 1px solid $border;
+}
+h1 {
+  // This doesn't work
+  border-top: 1px solid $border;
+}
+.sidebar {
+  $color-base: #222222;
+  background: $color-base;
+}
+p {
+  color: $color-base;
+}
+
+
+sup {
+  #{$side}: -0.5em;
+}
+
+.callout-#{$side} {
+  background: #777;
+}

@@ -1,53 +1,11 @@
-.content {
-  border: 1px bold #ccc;
-  padding: 20px;
-}
-
-.content h2 {
-  font-size: 3em;
-  margin: 20px 0;
-}
-
-.content p {
-  font-size: 1.5em;
-  margin: 15px 0;
-}
-
-.btn {
-  text-decoration: underline;
-  text-transform: lowercase;
-}
-
-.content {
-  border: 1px solid #ccc;
-  padding: 20px;
-  background: #ccc;
-}
-
-.content .callout {
-  border-color: red;
-}
-
-.content.callout {
-  border-color: green;
-}
-a {
-  color: #999;
-}
-a:hover {
-  color: #777;
-}
-a:active {
-  color: #888;
-}
-
 .sidebar {
-  float: right;
-  width: 300px;
+  border: 1px solid #777777;
 }
-.users .sidebar {
-  width: 400px;
+
+.sidebar p {
+  color: #777777;
 }
-.content .cell h2 a:hover {
-  color: red;
+
+h2:before {
+  content: 'My Blog';
 }
