@@ -1,74 +1,49 @@
-$color-base: #333333;
-$color: #87bf64;
+// @mixin respond-to($val, $query) {
+//   @media ($val: $query) {
+//     @content
+//   }
+// }
 
-h2 {
-  font-size: 10px + 4pt;
-  
-  // This doesn't work correctly
-  // font-size: 10px + 4em;
-  line-height: ceil(1.2);
-}
+// .sidebar {
+//   border: 1px solid #ccc;
+//   @include respond-to(max-width, 600px) {
+//     float: right;
+//     width: 30%;
+//   }
+// }
+
+
+// This doesn't work correctly
+// .sidebar {
+//   border: 1px solid #ccc;
+// }
+// 
+// .callout {
+//   @media (min-width: 700px) {
+//     @extend .sidebar;
+//     width: 35%;
+//   }
+// }
+
+// @media (min-width: 700px) {
+//   .content {
+//     border: 1px solid #ccc;
+//   }
+//   .aside {
+//     @extend .content;
+//     width: 35%;
+//   }
+// }
+
 
 .sidebar {
-  width: percentage(350px/1000px); 
+  @media (min-width: 700px) {
+    width: 50%;
+  }
 }
 
-.addition {
-  background: $color-base + #112233;
-}
-
-.subtraction {
-  background: $color-base - #112233;
-}
-
-.muliplication {
-  background: $color-base * 2;
-}
-
-.division {
-  background: $color-base / 2;
-}
-
-.alpha {
-  background: rgba($color, 0.8);
-}
-
-.beta {
-  background: rgba(#000, 0.8);
-}
-
-.lighten {
-  background: lighten($color, 20%);
-}
-
-.darken {
-  background: darken($color, 20%);
-}
-
-.saturate {
-  background: saturate($color, 20%);
-}
-
-.desaturate {
-  background: desaturate($color, 20%);
-}
-
-.mix-a {
-  color: mix(#ffff00, #107fc9);
-}
-
-.mix-b {
-  color: mix(#ffff00, #107cf9, 30%);
-}
-
-.grayscale {
-  color: grayscale($color);
-}
-
-.invert {
-  color: invert($color);
-}
-
-.complement {
-  color: complement($color);
+.callout {
+  @media (min-width: 700px) {
+    width: 35%; 
+  }
 }

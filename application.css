@@ -1,53 +1,20 @@
-h2 {
-  font-size: 15.3333333333px;
-  line-height: 2; }
+@media (min-width: 700px) {
+  .sidebar {
+    width: 50%; } }
 
-.sidebar {
-  width: 35%; }
-
-.addition {
-  background: #445566; }
-
-.subtraction {
-  background: #221100; }
-
-.muliplication {
-  background: #666666; }
-
-.division {
-  background: #1a1a1a; }
-
-.alpha {
-  background: rgba(135, 191, 100, 0.8); }
-
-.beta {
-  background: rgba(0, 0, 0, 0.8); }
-
-.lighten {
-  background: #bfddac; }
-
-.darken {
-  background: #558637; }
-
-.saturate {
-  background: #82d54e; }
-
-.desaturate {
-  background: #8ca97a; }
-
-.mix-a {
-  color: #88bf65; }
-
-.mix-b {
-  color: #58a3ae; }
-
-.grayscale {
-  color: #929292; }
-
-.invert {
-  color: #78409b; }
-
-.complement {
-  color: #9c64bf; }
+@media (min-width: 700px) {
+  .callout {
+    width: 35%; } }
 
 /*# sourceMappingURL=application.css.map */
+
+
+/* This should be done manually */
+/*@media (min-width: 700px) {
+  .sidebar {
+    width: 50%;
+  }
+  .callout {
+    width: 35%;
+  }
+}*/
