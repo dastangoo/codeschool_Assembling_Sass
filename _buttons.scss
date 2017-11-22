@@ -1,71 +1,32 @@
-@mixin button($radius, $color: #000) {
-  border-radius: $radius;
-  color: $color;
-}
-
-@mixin transition($val...) {
-  -webkit-transition: $val;
-  -moz-transition: $val;
-  transition: $val;
-}
-
-@mixin highlight($color, $side) {
-  border-#{$side}-color: $color;
-}
-// @mixin highlight-t($color) {
-//   border-top-color: $color;
+// .btn-a {
+//   background: #777;
+//   border: 1px solid #ccc;
+//   font-size: 1em;
+//   text-transform: uppercase;
 // }
-// @mixin highlight-r($color) {
-//   border-right-color: $color;
+// 
+// .btn-b {
+//   @extend .btn-a;
+//   background: #ff0;
 // }
-// @mixin highlight-b($color) {
-//   border-bottom-color: $color;
-// }
-// @mixin highlight-l($color) {
-//   border-left-color: $color;
+// 
+// .sidebar .btn-a {
+//   text-transform: lowercase;
 // }
 
-$rounded: 3px !default;
-
-$color-base: #777777;
-
-$side: top;
-
-$properties: 4px, #000;
-
-
-.btn-a {
-  @include button($properties...);
-  @include transition(color 0.3s ease-in, background 0.5s ease-out);
-  // @include highlight-r(#f00);
-  @include height(#f00, right);
-}
-1
-.btn-b {
-  border-radius: $rounded;
-  color: #222;
-}
-p {
-  $border: #ccc;
-  border-top: 1px solid $border;
-}
-h1 {
-  // This doesn't work
-  border-top: 1px solid $border;
-}
-.sidebar {
-  $color-base: #222222;
-  background: $color-base;
-}
-p {
-  color: $color-base;
-}
-
-
-sup {
-  #{$side}: -0.5em;
-}
-
-.callout-#{$side} {
+%btn {
   background: #777;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.btn-a {
+  @extend %btn;
+}
+.btn-b {
+  @extend %btn;
+  background: #ff0;
+}
+.sidebar .btn-a {
+  text-transform: lowercase;
 }
