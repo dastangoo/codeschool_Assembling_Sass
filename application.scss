@@ -1,28 +1,49 @@
-.content {
-  border: 1px solid #ccc;
-  padding: 20px;
-  h2 {
-    font-size: 3em;
-    margin: 20px 0;
+@function fluidize($target, $context) {
+  @return ($target / $context) * 100%;
+}
+
+.sidebar {
+  width: fluidize(350px, 1000px);
+}
+
+$theme: pink;
+
+header {
+  @if $theme == dark {
+    background: #000;
+  } @else if $theme == pink{
+    background: pink;
+  } @else {
+    background: #fff;
   }
 }
 
-.callout {
-  @extend .content;
-  background: #ddd;
+$authors: nick aimee dan drew;
+@each $author in $authors {
+  .author-#{$author} {
+    background: url(author-#{$author}.jpg);
+  }
 }
 
-%ir {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
+.item {
+  position: absolute;
+  right: 0;
+  @for $i from 1 through 3 {
+    &.item-#{$i} {
+      top: $i * 30px;
+    }
+  }
 }
 
-.logo {
-  @extend %ir;
-}
-.social {
-  @extend %ir;
+$i: 2;
+
+.item {
+  position: absolute;
+  right: 0;
+  @while $i <= 6 {
+    &.item-#{$i} {
+      top: $i * 30px;
+    }
+    $i: $i + 2;
+  }
 }

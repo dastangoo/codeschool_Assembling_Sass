@@ -1,32 +1,13 @@
-// .btn-a {
-//   background: #777;
-//   border: 1px solid #ccc;
-//   font-size: 1em;
-//   text-transform: uppercase;
-// }
-// 
-// .btn-b {
-//   @extend .btn-a;
-//   background: #ff0;
-// }
-// 
-// .sidebar .btn-a {
-//   text-transform: lowercase;
-// }
-
-%btn {
-  background: #777;
-  border: 1px solid #ccc;
-  font-size: 1em;
-  text-transform: uppercase;
+@mixin button($color, $rounded: false) {
+  color: $color;
+  @if $rounded {
+    border-radius: $rounded;
+  }
 }
-.btn-a {
-  @extend %btn;
+
+.btn-a { 
+  @include button(#000);
 }
 .btn-b {
-  @extend %btn;
-  background: #ff0;
-}
-.sidebar .btn-a {
-  text-transform: lowercase;
+  @include button(#333, 4px);
 }

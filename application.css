@@ -1,13 +1,39 @@
-.content,
-.callout {
-  border: 1px solid #ccc;
-  padding: 20px;
-}
-.content h2,
-.callout h2 {
-  font-size: 3em;
-  margin: 20px 0;
-}
-.callout {
-  background: #ddd;
-}
+.sidebar {
+  width: 35%; }
+
+header {
+  background: pink; }
+
+.author-nick {
+  background: url(author-nick.jpg); }
+
+.author-aimee {
+  background: url(author-aimee.jpg); }
+
+.author-dan {
+  background: url(author-dan.jpg); }
+
+.author-drew {
+  background: url(author-drew.jpg); }
+
+.item {
+  position: absolute;
+  right: 0; }
+  .item.item-1 {
+    top: 30px; }
+  .item.item-2 {
+    top: 60px; }
+  .item.item-3 {
+    top: 90px; }
+
+.item {
+  position: absolute;
+  right: 0; }
+  .item.item-2 {
+    top: 60px; }
+  .item.item-4 {
+    top: 120px; }
+  .item.item-6 {
+    top: 180px; }
+
+/*# sourceMappingURL=application.css.map */
